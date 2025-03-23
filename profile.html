@@ -1,41 +1,23 @@
-<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ข้อมูลส่วนตัว</title>
+    <title>โปรไฟล์</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- โหลด header -->
     <div id="header-container"></div>
-
-    <!-- Content -->
     <main>
-        <section>
+        <section class="profile">
             <h1>ข้อมูลส่วนตัว</h1>
-            <p>ยินดีต้อนรับสู่หน้าข้อมูลส่วนตัวของฉัน!</p>
-            <p>ข้อมูลเกี่ยวกับการศึกษาและประสบการณ์ต่าง ๆ ของฉันจะถูกแสดงในหน้านี้</p>
+            <p>ชื่อ: [ชื่อของคุณ]</p>
+            <p>ความสนใจ: ดิสนีย์, เทคโนโลยี, การออกแบบ</p>
         </section>
     </main>
-
-    <!-- โหลด footer -->
     <div id="footer-container"></div>
-
     <script>
-        // โหลดไฟล์ header.html
-        fetch('includes/header.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('header-container').innerHTML = data;
-    });
-
-fetch('includes/footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('footer-container').innerHTML = data;
-    });
-
+        fetch('includes/header.html').then(res => res.text()).then(data => document.getElementById('header-container').innerHTML = data);
+        fetch('includes/footer.html').then(res => res.text()).then(data => document.getElementById('footer-container').innerHTML = data);
     </script>
 </body>
 </html>
