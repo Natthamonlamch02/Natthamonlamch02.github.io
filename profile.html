@@ -1,22 +1,66 @@
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>โปรไฟล์</title>
+    <title>Profile Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Header -->
     <div id="header-container"></div>
-    <main>
-        <section class="profile">
-            <h1>ข้อมูลส่วนตัว</h1>
-            <p>ชื่อ: [ชื่อของคุณ]</p>
-            <p>ความสนใจ: ดิสนีย์, เทคโนโลยี, การออกแบบ</p>
-        </section>
-    </main>
+
+    <!-- Main content -->
+    <div class="container">
+        <div class="profile-sidebar">
+            <img src="images/profile.jpg" alt="Profile Picture">
+            <h2>ข้อมูลส่วนตัว</h2>
+            <p><strong>วันเกิด</strong> 02 มกราคม 2547</p>
+            <p><strong>อาชีพ:</strong> Student</p>
+            <p><strong>ที่อยู่:</strong> Nan, Thailand</p>
+            <p><strong>อีเมล:</strong> 65030121@kmitl.ac.th</p> 
+            <p><strong>โทร:</strong> 0123456789</p>
+            
+            <h3>Hard Skills</h3>
+            <div class="skills">
+                <div class="skill-bar"><span style="width: 90%">Video Editing(80%)</span></div>
+                <div class="skill-bar"><span style="width: 80%">graphic & Design (80%)</span></div>
+                <div class="skill-bar"><span style="width: 50%">Motion graphic (50%)</span></div>
+            </div>
+        </div>
+
+        <div class="profile-info">
+            <h2>นางสาวนัทธมน ลำเจริญ</h2>
+            <h2>เกี่ยวกับฉัน</h2>
+            <p>กำลังศึกษาอยู่ชั้นปีที่ 3 คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี สาขาครุวิศวกรรมคอมพิวเตอร์</p> 
+            
+            <h2>ประวัติการศึกษา</h2>
+            <ul>
+                <li><strong>2552-2558:</strong> ระดับประถมศึกษา - โรงเรียนราชานุบาล</li>
+                <li><strong>2558-2565:</strong> ระดับมัธยมศึกษา - โรงเรียนสตรีศรีน่าน</li>
+                <li><strong>2565-ปัจจุบัน:</strong> ระดับปริญญาตรี - สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</li>
+            </ul>
+
+            <h2>ประสบการณ์ทำงาน</h2>
+            <p><strong>iknowplus</strong> - ระยะเวลา 35 วัน</p>
+            <h2>ประสบการณ์ระหว่างการศึกษา</h2>
+            <p>ชั้นปีที่ 2-3 <strong>สโมสรนักศึกษา</strong> </p>
+            <p>ชั้นปีที่ 2   <strong>คทากรครุศาสตร์</strong> </p>
+            <p>ชั้นปีที่ 2   <strong>คณะกรรมการนักศึกษา</strong> </p>
+            <p>ชั้นปีที่ 1-3   <strong>Freelance Video Editor</strong> </p>
+        
+
+        </div>
+    </div>
+
+    <!-- Footer -->
     <div id="footer-container"></div>
+
     <script>
+        // Fetch and load header
         fetch('includes/header.html').then(res => res.text()).then(data => document.getElementById('header-container').innerHTML = data);
+        
+        // Fetch and load footer
         fetch('includes/footer.html').then(res => res.text()).then(data => document.getElementById('footer-container').innerHTML = data);
     </script>
 </body>
