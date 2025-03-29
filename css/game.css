@@ -1,26 +1,28 @@
-/* Body */
+
+/* General Body Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     scroll-behavior: smooth;
-    padding-top: 80px; /* เพิ่ม padding-top ให้พอเหมาะกับ header */
     display: flex;
-    flex-direction: column; /* จัด layout เป็น column */
-    justify-content: space-between; /* จัดให้เนื้อหาตรงกลาง และ footer อยู่ที่ล่างสุด */
-    height: 100vh; /* ทำให้หน้าเต็มความสูง */
-    text-align: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px; /* เพื่อให้หน้าเต็มความสูง */
+    justify-content: space-between; 
+    height: 100vh;
+    text-align: center;  
 }
 
-/* Header */
+/* Header Styles */
 header {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between; /* เปลี่ยนจาก flex-start เพื่อรองรับการวางปุ่มบนมือถือ */
     align-items: center;
-    background: linear-gradient(45deg, #f1db89, #f1edd7);
+    background: linear-gradient(45deg, #ecc229, #f1edd7);
     padding: 5px 10px;
-    color: rgb(93, 88, 49);
+    color: rgb(97, 84, 8);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     position: fixed;

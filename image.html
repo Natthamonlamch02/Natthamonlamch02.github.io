@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เว็บไซต์ส่วนตัว</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header จะถูกโหลดจากไฟล์แยก -->
+    <div id="header-container"></div>
+    
+    <article>
+        <h2>รูปภาพเพิ่มเติม</h2>
+        <p>รูปภาพกิจกรรมที่ทำบางส่วน</p>
+        
+        <div class="gallery">
+            <figure>
+                <img src="images/img4.jpg" alt="ภาพที่ 1 " onclick="openLightbox(this)">
+                <figcaption>คทากรงานแคแสด</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img5.jpg" alt="ภาพที่ 2 " onclick="openLightbox(this)">
+                <figcaption>คัดเลือกผู้อันเชิญ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img6.jpg" alt="ภาพที่ 3 " onclick="openLightbox(this)">
+                <figcaption>ออกบูธของคณะ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img7.jpg" alt="ภาพที่ 4 " onclick="openLightbox(this)">
+                <figcaption>ทำงานสโมสรถ่ายแบบเสื้อ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img8.jpg" alt="ภาพที่ 5 " onclick="openLightbox(this)">
+                <figcaption>ทำงานสโมสรถ่ายแบบเสื้อ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img9.jpg" alt="ภาพที่ 6 " onclick="openLightbox(this)">
+                <figcaption>ทำงานสโมสรถ่ายแบบเสื้อ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img10.jpg" alt="ภาพที่ 7 " onclick="openLightbox(this)">
+                <figcaption>ผู้ดูแล/คัดเลือกคทากร</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img11.jpg" alt="ภาพที่ 8 " onclick="openLightbox(this)">
+                <figcaption>ออกบูธที่ไบเทค</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img12.jpg" alt="ภาพที่ 9 " onclick="openLightbox(this)">
+                <figcaption>กิจกรรมสโม</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img13.jpg" alt="ภาพที่ 10 " onclick="openLightbox(this)">
+                <figcaption>ออกบูธ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img14.jpg" alt="ภาพที่ 11" onclick="openLightbox(this)">
+                <figcaption>ถ่ายงาน</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img15.jpg" alt="ภาพที่ 12 " onclick="openLightbox(this)">
+                <figcaption>ออกบูธ</figcaption>
+            </figure>
+            <figure>
+                <img src="images/img16.jpg" alt="ภาพที่ 13 " onclick="openLightbox(this)">
+                <figcaption>งานสี่เทียน</figcaption>
+            </figure>
+        </div>
+    </article>
+
+    <!-- Footer จะถูกโหลดจากไฟล์แยก -->
+    <div id="footer-container"></div>
+
+    <script>
+        // Fetch and load header
+        fetch('includes/header.html').then(res => res.text()).then(data => document.getElementById('header-container').innerHTML = data);
+        
+        // Fetch and load footer
+        fetch('includes/footer.html').then(res => res.text()).then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+
+</body>
+</html>
